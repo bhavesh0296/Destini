@@ -11,6 +11,11 @@ The goal of this challenge is to get you comfortable with implementing the MVC d
 
 In this app, you will be creating a “choose your own adventure” game similar to the App Store hit “Life Line” app. The app will tell a story depending on what the user chooses and can be fleshed out and modified to provide an engaging story-telling experience
 
+## App Preview
+ 
+<kbd>
+<img src="Screenshots/Simulator Screen Recording - iPhone 8 - 2021-12-12 at 21.17.56.gif" alt="Home" width="250" /> 
+</kbd>
 
 ## Story Strings
 ```
