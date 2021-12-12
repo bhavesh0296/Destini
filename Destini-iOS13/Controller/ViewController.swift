@@ -13,12 +13,27 @@ class ViewController: UIViewController {
     @IBOutlet weak var storyLabel: UILabel!
     @IBOutlet weak var choice1Button: UIButton!
     @IBOutlet weak var choice2Button: UIButton!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
 
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
 
+    var storyBrain = StoryBrain()
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        updateUI()
+    }
+
+    @IBAction func choiceMade(_ sender: UIButton) {
+        storyBrain.choiceMade(sender.tag)
+        updateUI()
+    }
+
+    fileprivate func updateUI() {
+        storyLabel.text = storyBrain.getTitle()
+        choice1Button.setTitle(storyBrain.getChoice1Text(), for: .normal)
+        choice2Button.setTitle(storyBrain.getChoice2Text(), for: .normal)
+    }
 
 }
 
